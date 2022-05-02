@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+        <title>Question 2</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Form</h1>
+        <br>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-group">
+                <label for="pass">Password:</label>
+                <input type="password" class="form-control" id="pass" placeholder="Enter Password">
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio1" name="gender" value="Female" checked>
+                <label class="form-check-label" for="radio1">Female</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" id="radio2" name="gender" value="Male">
+                <label class="form-check-label" for="radio2">Male</label>
+            </div>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Department</th>
+                        <th>Avg. Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Human Resource</td>
+                        <td>50000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>R&D</td>
+                        <td>90000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Sales</td>
+                        <td>80000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="check1" name="option1" value="remember me" checked>
+                <label class="form-check-label">Remember me</label>
+            </div>
+            <br>
+            <div class="container">
+                <button type="button" class="btn btn-success">Create</button>
+                <button type="button" class="btn btn-info">Read</button>
+                <button type="button" class="btn btn-warning">Update</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

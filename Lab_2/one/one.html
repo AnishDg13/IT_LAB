@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>One</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Student Bio-Data Form</h1>
+        </div>
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <label for="usr">Email-id:</label>
+            <input type="email" class="form-control" id="usr" placeholder="test@test.com">
+        </div>
+
+        <div class="radio">
+            Gender:
+            <br />
+            <label><input type="radio" name="optradio" checked>Male</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio">Female</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" name="optradio">Other</label>
+        </div>
+
+
+        <form>
+            <div class="form-group">
+                <label for="picture">Upload your photograph:</label>
+                <input type="file" class="form-control-file" id="photograph">
+            </div>
+        </form>
+
+        <div class="checkbox">
+            Languages Known:
+            <br />
+            <label><input type="checkbox" value="English">English</label>
+            <label><input type="checkbox" value="Hindi">Hindi</label>
+            <label><input type="checkbox" value="OLL">Other LocaL Language</label>
+        </div>
+        
+
+
+        <br />
+        <div class="form-group">
+            <label for="sel1">Refer to table and select stream code:</label>
+            <select class="form-control" id="sel1">
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ECE</option>
+            </select>
+        </div>
+        <br />
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Stream</th>
+                    <th scope="col">Stream Code</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Computer Science</td>
+                    <td>CSE</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Information Technology</td>
+                    <td>IT</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Electronics and Communication Engineering</td>
+                    <td>ECE</td>
+                </tr>
+
+        </table>
+        <br />
+        <button type="button" class="btn btn-outline-primary">Upload Form</button>
+
+
+    </div>
+</body>
+</html>
