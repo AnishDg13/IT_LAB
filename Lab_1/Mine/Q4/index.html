@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>tde jQuery Example</title> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</script>
+<script type = "text/javascript" language="javascript" src="app.js">
+</script>
+<style>
+    table,th,td{
+        border: solid 1px;
+    }
+</style>
+</head>
+<body>
+
+    <p>
+    <table>
+        <tr>
+        <td>Brand</td>
+        <td>Laptop</td>
+        <td>Mobile</td>
+        </tr>
+        <tr>
+        <td>HP</td>
+        <td>20000</td>
+        <td>6000</td>
+        </tr>
+        <tr>
+        <td>Nokia</td>
+        <td>11000</td>
+        <td>6000</td>
+        </tr>
+        <tr>
+        <td>Samsung</td>
+        <td>12000</td>
+        <td>7000</td>
+        </tr>
+        <tr>
+        <td>Motorola</td>
+        <td>13000</td>
+        <td>8000</td>
+        </tr>
+        <tr>
+        <td>Apple</td>
+        <td>14000</td>
+        <td>9000</td>
+        </tr>
+    </table>
+    </p>
+
+    <div class="form" style="background-color: lightyellow; width: 100%; height: 100%;">
+        <label for="brand">Choose a background color</label>
+        <select name="brand" id="brand">
+            <option value="HP">HP</option>
+            <option value="Nokia">Nokia</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Motorola">Motorola</option>
+            <option value="Apple">Apple</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="qty">Number of devices</label>
+        <input type="number" name="qty" id="qty" value="0">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <input type="radio" id="type" name="type" value="Mobile" checked>
+        <label for="type">Mobile</label>
+        <input type="radio" id="type" name="type" value="Laptop">
+        <label for="type">Laptop</label>
+        <br>
+        <br>
+        <br>
+        <button class="produce_bill">Produce bill</button>
+    </div>
+
+</body>
+</html> 
