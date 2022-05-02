@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form name="form" action="{% url 'formView' %}" method="POST">
+        {% csrf_token %}
+        You are : <strong>{{name}}</strong>
+        ROll No. is <strong>{{roll}}</strong>
+        Subject is : <strong id="x">{{subject}}</strong>
+
+                     <button  type="submit" value="submit">
+                         <strong>Go Back</strong>
+                     </button>
+     </form>
+
+        <script>
+
+            index = parseInt(document.getElementById("x").innerHTML);
+            const arr = ["Math", "DSA", "OOP", "ADSA", "FLAT"];
+            document.getElementById("x").innerHTML = arr[index - 1];
+
+        </script>
+</body>
+</html>
