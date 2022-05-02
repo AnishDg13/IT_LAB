@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <form action="temp" method=post>
+        {%csrf_token%}
+        <select name="selected">
+            {% for human in humans%}
+            {% if human.firstname == current.firstname %}
+            <option value="{{human.firstname}}" selected>{{human.firstname}}</option>
+            {% else %}
+            <option value="{{human.firstname}}">{{human.firstname}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
+        <input type="submit" />
+        <br />
+        Name:
+        {{current.firstname}}
+        Address:
+        <input type="text" name="pg_address" value="{{current.address}}" />
+        City:
+        <input type="text" name="pg_city" value="{{current.city}}" />
+        <br />
+
+
+        <input type="submit" formaction="update" />Update
+        <input type="submit" formaction="delete" />Delete
+    </form>
+
+    
+
+    
+
+</body>
+</html>
