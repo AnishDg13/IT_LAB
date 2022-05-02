@@ -1,0 +1,7 @@
+td,button{
+	width: 123px;
+	background-color: lightcyan;
+}
+td{
+	border: solid cyan 3px;
+}

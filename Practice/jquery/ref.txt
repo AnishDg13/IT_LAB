@@ -1,0 +1,4 @@
+$(selector).attr({attribute:value, attribute:value,...})
+
+<script src="jquery-3.6.0.min.js"></script>
+

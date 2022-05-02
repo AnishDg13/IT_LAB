@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function()
+			{
+				
+
+				var laptop_prices=[100,110,120,130,140];
+				var mobile_prices=[50,60,70,80,90];
+				$("button").click(function()
+					{	
+						var index=$("select").val();
+
+						var m=$("input[type='radio']:checked").val();
+						//alert(m);
+						var qt=$("#qt").val();
+
+						if(qt>0)
+						{
+							//alert(m);
+							if(m=="mobile")
+							{
+							 alert(""+qt*mobile_prices[index]);
+							}
+							
+							{
+								alert(""+qt*laptop_prices[index]);
+							}
+						}
+
+					});
+			});
+
+	</script>
+
+
+</head>
+<body>
+	<select id="option_comp">
+		<option value="0">HP</option>
+		<option value="1">Nokia</option>
+		<option value="2">Samsung</option>
+		<option value="3">Motorola</option>
+		<option value="4">Apple</option>
+	</select>
+
+	<br>
+
+	<input type="radio" name="morl" value="mobile">Mobile
+	<input type="radio" name="morl" value="laptop">Laptop
+
+	<br>
+
+	<input type="textbox" id="qt">
+
+	<button >Produce Bill</button>
+</body>
+</html>

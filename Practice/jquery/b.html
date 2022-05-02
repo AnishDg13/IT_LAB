@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Two </title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function()
+		{
+			$("div").click(
+				function()
+				{
+					//$("#mydiv").css("background-color","yellow")
+					
+					var1 = $("h1").attr("title");
+					//alert(var1);
+					var2 = $("#one").text();
+					$("#two").text(var2);
+					$("#three").css("background-color","yellow");
+				});
+		}
+		);
+
+	</script>
+
+
+</head>
+<body>
+	<div>
+		<h1 title="LOL_LOL">Here !!!!</h1>
+		<div id="one">Here one</div>
+		<div id="two">Here two</div>
+		<div id="three" style="background-color: blue;">Here three</div>
+	</div>
+</body>
+
+</html>

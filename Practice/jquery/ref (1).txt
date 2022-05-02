@@ -1,0 +1,33 @@
+1)MPI_Init(&argc,&argv);
+2) MPI_Comm_rank(MPI_COMM_WORLD,&rank);
+3)MPI_Comm_size(MPI_COMM_WORLD,&size);
+4)MPI_Finalize()
+
+5)MPI_Send(void *message,int count,MPI_Datatype datatype,int dest,int tag, MPI_COMM_WORLD);
+
+6)MPI_Recv(void *message, int count,MPI_Datatype datatype, int source,int tag, MPI_COMM_WORLD, MPI_status *status);
+//use MPI_STATUS_IGNORE
+
+7)MPI_Ssend(void *message, int count, MPI_Datatype datatype, int dest, int tag, MPI_COMM_WORLD);
+
+8)MPI_Bsend(void *message, int count, MPI_Datatype datatype, int dest, int tag, MPI_Comm comm);
+
+MPI_Buffer_attach(void *buffer, int size//in bytes);
+MPI_Buffer_detach(void *buffer, int size//in bytes);
+
+int size=MPI_BSEND_OVERHEAD + sizeof(int);
+char* buffer=(char*)malloc(size);
+
+//for each process attach and detach and free
+
+9)MPI_Bcast(void *element, int count, MPI_Datatype dtype, int root, MPI_Comm c);
+
+10)MPI_Reduce(void *sendbuf, void *recvbuf, int count//number of elements in sendbuffer//, MPI_Datatype dtype, MPI_Op op, int root//imp, MPI_Comm c);
+
+11)MPI_Scatter(void *sendbuf, int count, MPI_Datatype, void *recvbuf, int recvcount, MPI_Datatype, int root//imp, MPI_COMM_WORLD);
+
+12)MPI_Gather(void *sendbuf, int count, MPI_Datatype, void *recvbuf, int recvcount, MPI_Datatype,int root, MPI_Comm)
+
+//received in rank order
+
+13)MPI_Scan(void *sendbuf, void *recvbuf, int count,MPI_Datatype,MPI_Op, MPI_COMM_WORLD);

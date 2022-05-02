@@ -1,0 +1,24 @@
+1)Create new project 
+Blank Django create project
+next->name[eg First]
+create
+2)
+Solution explorer
+python environment->right click, add environment
+name:env->create
+3)Click on First
+create->add->new item
+empty pythpn file
+
+4) In views.py
+from django.http import httpResponse
+def hello(request):
+return HttpResponse('hello world')
+
+5)In urls.py
+from First.views import hello
+path('admin/',admin.site.urls)
+path('hello/',hello)
+
+6)Run web server
+//localhost:xxx/hello

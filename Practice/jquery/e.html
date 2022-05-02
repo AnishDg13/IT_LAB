@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" language=javascript>
+
+			$(document).ready(function(){
+				$("#submit_button").click(
+					function()
+					{
+						var result= $("input[type=\"checkbox\"]:checked");
+						var result2="";
+						if (result.length>0)
+						{
+							$("#res").html(result.val()+" is checked");
+							result.each(function()
+							{
+								result2+=$(this).val() + "<br/>";
+							});
+						$("#res2").html(result2);
+						}
+						else
+						{
+							$("#res").html("None checked.")
+							$("#res2").html(" ")
+						}
+
+						
+					}
+
+					);
+			});
+
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="checkbox" name="Gender" value="Male">Male<br>
+			<input type="checkbox" name="Gender" value="Female">Female
+			<br>
+			<input id="submit_button" type="submit" value="submit"/>
+			<div id="res"></div>
+			<div id="res2"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script type="text/javascript" language="javascript">
+		$(document).ready(function()
+			{
+				$("button").click(function()
+					{
+						var fsize=parseInt($("#font_size").val())
+						$("#card").css("background-color",$("#bag_color").val()+"");
+
+						$("#card").css("font-family",$("#myfont").val()+"");
+
+						if(fsize>0)
+						{
+							$("#card").css("font-size",fsize);
+						}
+
+						
+						var pic_val=$("input[type=\"checkbox\"]:checked").val();
+						
+						
+						if (pic_val)
+						{
+							//alert("Adding Pic");
+							$("#img_id").attr("src","img.png");
+							
+							$("#img_id").css("width","200px");
+							$("#img_id").css("height","200px");
+							$("#img_id").css("paddingTop","200px");
+
+						}
+						
+						
+
+						var border_res=$("input[name='border_select']:checked").val();
+
+						//alert(border_res);
+						if(border_res)
+						{
+							$("#card").css("border",border_res);
+						}
+						
+
+						$("#txt_ins").text($("#mytext").val()+"")
+
+					});
+			});
+
+	</script>
+
+
+</head>
+<body>
+	<table style=" width:100%">
+		
+		<td style="width: 50%;">
+			
+			Choose a background color:
+			<select id="bag_color">
+				<option value="yellow">Yellow</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+			</select>
+			<br>
+			<br>
+
+			Choose a font:
+			<select id="myfont">
+				<option value="cursive">Cursive</option>
+				<option value="serif">Sans Serif</option>
+			</select>
+
+			<br>
+			<br>
+			Specify a numeric font size:
+			<input type="text" id="font_size">
+
+			<br>
+			<br>
+
+			Chose a border style:
+			<input type="radio" id="border_none" name="border_select" value="none">
+			<label for ="none">None</label>
+
+			<input type="radio" id="border_double" name="border_select" value="double">
+			<label for="double">Double</label>
+
+			<input type="radio" id="border_single" name="border_select"
+			value="single">
+			<label for="single">Single</label>
+
+			<br>
+			<br>
+
+			<input type="checkbox" id="default_pic" value="pic_select">
+			<label for="pic_select">Add default picture</label>
+
+			<br>
+			<br>
+
+			<input type="text" id="mytext" style="width: 50%;height:50px;">
+			<br>
+			<button>Update</button>
+
+
+
+		</td>
+		<td style="width: 50%;">
+			<div id="card" style="border: 2px solid black; height:500px;background-color: cyan;">
+				<p id="txt_ins"></p>
+				<img id="img_id">
+			</div>
+		</td>
+
+	</table>
+</body>
+</html>

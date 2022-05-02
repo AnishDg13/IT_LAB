@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LAB 1 - 1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var var1=0;
+			var now="";
+			var var2=0;
+			var var_res=0;
+			var op="";
+			var arr=[];
+			$("#clear").click(function(){
+				$("input").val("");
+			});
+			
+			$("#equal").click(function()
+				{
+					
+					/*arr=($("input").val()).split(" ");
+
+					var1=parseInt(arr[0]);
+					var2=parseInt(arr[2]);
+					op=arr[1];
+					switch(op)
+					{
+						case "X":
+						var_res=var1*var2;
+						break;
+
+						case "+":
+						var_res=var1+var2;
+						break;
+
+						case "-":
+						var_res=var1-var2;
+						break;
+
+						
+
+					}
+					*/
+					var_res=eval($("input").val())
+					$("input").val(var_res);
+				});
+			
+			$("#mult,#add,#sub").click(function(){
+				var1=$("input").val();
+				$("input").val(var1 + " "+$(this).text()+" ");
+				
+			});
+
+			$("#1,#2,#3,#4,#5,#6,#7,#8,#9,#0").click(function()
+				{
+					var temp=$("input").val();
+					$("input").val(temp+$(this).text());
+				});
+
+
+			$("#back").click(function(){
+				now=$("input").val();
+				
+				if(now.length==0)
+					alert('Already Empty');
+				else
+				{
+					now=now.trim();
+					now=now.substring(0,now.length-1);
+					now=now.trim();
+					$("input").val(now);
+				}
+			});
+	
+
+
+		});
+
+	</script>
+	<link rel="stylesheet" href="styles_ex2.css">
+</head>
+<body >
+	<input type="text" style="width:520px">
+	<table>
+		<tr>
+			<td id="7">7</td>
+			<td id="8">8</td>
+			<td id="9">9</td>
+			<td> <button id="mult">*</button>  </td>
+		</tr>
+
+		<tr>
+			<td id="4">4</td>
+			<td id="5">5</td>
+			<td id="6">6</td>
+			<td><button id="sub">-</button></td>
+		</tr>
+
+		<tr>
+			<td id="1">1</td>
+			<td id="2">2</td>
+			<td id="3">3</td>
+			<td> <button id="add">+</button></td>			
+		</tr>
+
+		<tr>
+			<td><button id="clear">C</button> </td>
+			<td id="0">0</td>
+			<td> <button id="equal">=</button>  </td>
+			<td> <button id="back">Backspace</button></td>			
+		</tr>
+
+	</table>
+</body>
+</html>
