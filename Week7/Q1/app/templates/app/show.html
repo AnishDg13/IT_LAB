@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Search people by company name</h1>
+    <form action="/list" method=post>
+        {% csrf_token %}
+        <input type="text" placeholder="Company name" name="company">
+        <input type=submit>
+    </form>
+
+    {% for person in persons %}
+    <div style="border: 1px solid #fff;width: 500px;margin:auto;line-height: 1;">
+        <h3>Name: {{person.person_name }}</h3>
+
+        <p>
+            Address: {{person.street}},
+            {{person.city}}
+        </p>
+    </div>
+    {% endfor %}
+    <a href="livesForm" style="margin-right: 20px;">New Person</a>
+    <a href="worksForm">New Work Profile</a>
+
+
+</body>
+</html>
