@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Search pages by category</h1>
+    <form action="/list" method=post style="margin-bottom: 10px;">
+        {% csrf_token %}
+        <input type="text" placeholder="Category name" name="category">
+        <input type=submit>
+    </form>
+
+
+    {% for page in pages %}
+    <div style="border: 1px solid #fff;width: 500px;margin:auto;line-height: 1;">
+        <h3>Title: {{page.title }}</h3>
+        <h5>Page Views:{{page.views}}</h5>
+        View Page: <a target="_blank" href="{% url 'updateViews' page.id %}">{{page.title}}</a>
+        <p>
+            Category: {{ page.category.name }}
+            <br />
+            Category Visits:{{page.category.noOfVisits}}
+            <br />
+            Likes: {{page.category.noOfLikes}}
+        </p>
+    </div>
+    {% endfor %}
+
+    <div style="margin-top: 20px;">
+        <a href="forms">New Page or New Category</a>
+    </div>
+
+
+</body>
+</html>
