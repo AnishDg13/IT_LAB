@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>
+        Results
+    </h1>
+    <p>You have selected company: <i>{{manufacturer}}</i></p>
+    <p>You have selected device type: <i>{{device}}</i></p>
+    <p>You have selected Quantity: <i>{{quantity}}</i></p>
+    <br />
+    <p>
+        Amount for one {{manufacturer}} {{device}} is Rs.
+        <i>{{amountForOne}}K</i>
+    </p>
+    <p>Total Cost: Rs. {% widthratio quantity 1 amountForOne %}K</p>
+
+</body>
+</html>
